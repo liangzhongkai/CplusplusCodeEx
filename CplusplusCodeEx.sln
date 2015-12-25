@@ -5,6 +5,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Singleton", "Singleton\Sing
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Packet9Section", "Packet9Section\Packet9Section.vcxproj", "{48AEE513-08D3-42A3-A8AD-E2AED639B6C6}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "inverse_square_root", "inverse_square_root\inverse_square_root.vcxproj", "{CC9D826F-AB25-439C-AA09-A8DDC61F7CC8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -27,6 +29,12 @@ Global
 		{48AEE513-08D3-42A3-A8AD-E2AED639B6C6}.Release|Win32.ActiveCfg = Release|Win32
 		{48AEE513-08D3-42A3-A8AD-E2AED639B6C6}.Release|Win32.Build.0 = Release|Win32
 		{48AEE513-08D3-42A3-A8AD-E2AED639B6C6}.Release|x64.ActiveCfg = Release|Win32
+		{CC9D826F-AB25-439C-AA09-A8DDC61F7CC8}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CC9D826F-AB25-439C-AA09-A8DDC61F7CC8}.Debug|Win32.Build.0 = Debug|Win32
+		{CC9D826F-AB25-439C-AA09-A8DDC61F7CC8}.Debug|x64.ActiveCfg = Debug|Win32
+		{CC9D826F-AB25-439C-AA09-A8DDC61F7CC8}.Release|Win32.ActiveCfg = Release|Win32
+		{CC9D826F-AB25-439C-AA09-A8DDC61F7CC8}.Release|Win32.Build.0 = Release|Win32
+		{CC9D826F-AB25-439C-AA09-A8DDC61F7CC8}.Release|x64.ActiveCfg = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
