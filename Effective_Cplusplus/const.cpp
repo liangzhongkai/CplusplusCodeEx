@@ -55,7 +55,7 @@ public:
     char & operator[](std::size_t position) {
         return 
             const_cast<char&>(                                                   //用来修改类型的const或volatile属性
-                static_cast<const TextBlock2&>(*this)[position]      //
+                static_cast<const TextBlock2&>(*this)[position]      //const TextBlock2&   这个加了const的类型才能调用上面const版本的operator[]
             );
     }
 private:

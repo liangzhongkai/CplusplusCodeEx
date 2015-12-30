@@ -76,8 +76,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="const.cpp" />
+    <ClCompile Include="construction.cpp" />
     <ClCompile Include="enum.cpp" />
     <ClCompile Include="inline.cpp" />
+    <ClCompile Include="static.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
