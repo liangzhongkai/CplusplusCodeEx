@@ -4,9 +4,13 @@
 class A
 {
 public:
-    static int aaaa;
+   static int aaaa;
 };
 A::aaaa = 0;
+
+//2 local static & non-local static
+//  供对外使用的对象最好使用local static
+//  non-local static即全局static
 
 
 

@@ -30,6 +30,9 @@
     <ClCompile Include="static.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="destruction.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
