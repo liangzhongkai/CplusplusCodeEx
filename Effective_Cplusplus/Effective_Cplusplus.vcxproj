@@ -78,8 +78,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="const.cpp" />
-    <ClCompile Include="construction.cpp" />
-    <ClCompile Include="destruction.cpp" />
+    <ClCompile Include="class_construction.cpp" />
+    <ClCompile Include="class_destruction.cpp" />
     <ClCompile Include="enum.cpp" />
     <ClCompile Include="inline.cpp" />
     <ClCompile Include="static.cpp" />

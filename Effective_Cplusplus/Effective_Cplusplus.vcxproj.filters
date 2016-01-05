@@ -24,13 +24,13 @@
     <ClCompile Include="enum.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="construction.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="static.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="destruction.cpp">
+    <ClCompile Include="class_construction.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="class_destruction.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

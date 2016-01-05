@@ -22,7 +22,7 @@ private://内部使用
 char str[] = "kct";
 char * p1 = str;                  //随意
 const char * p2 = str;            //const 数据
-char * const p3 = str;            //const 指针
+char * const p3 = str;            //const 指针      有点像引用
 const char * const  p4 = str;     //const 指针  数据
 //4.2 STL的指针 -- 跟平时的刚好相反
 vector<int> i1(10,1);
