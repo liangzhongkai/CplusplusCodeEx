@@ -15,18 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="const.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="inline.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="enum.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="static.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="class_construction.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -36,9 +24,45 @@
     <ClCompile Include="class_virtual_func.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="class.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="base_const.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="base_double.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="base_enum.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="base_exception.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="base_inline.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="base_interface.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="base_operator.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="base_smart_pointer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="base_static.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="design_Singleton.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="design_Singleton.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

@@ -77,15 +77,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="base_const.cpp" />
+    <ClCompile Include="base_double.cpp" />
+    <ClCompile Include="base_enum.cpp" />
+    <ClCompile Include="base_exception.cpp" />
+    <ClCompile Include="base_inline.cpp" />
+    <ClCompile Include="base_interface.cpp" />
+    <ClCompile Include="base_operator.cpp" />
+    <ClCompile Include="base_smart_pointer.cpp" />
+    <ClCompile Include="base_static.cpp" />
+    <ClCompile Include="class.cpp" />
     <ClCompile Include="class_virtual_func.cpp" />
-    <ClCompile Include="const.cpp" />
     <ClCompile Include="class_construction.cpp" />
     <ClCompile Include="class_destruction.cpp" />
-    <ClCompile Include="enum.cpp" />
-    <ClCompile Include="inline.cpp" />
-    <ClCompile Include="static.cpp" />
+    <ClCompile Include="design_Singleton.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="design_Singleton.h" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

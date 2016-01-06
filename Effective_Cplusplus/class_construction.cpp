@@ -1,5 +1,6 @@
 #include <stdafx.h>
 
+
 //1 内置类型     C++不保证他们的初始化
 int x = 0;
 double d = 0.0L;
@@ -17,7 +18,7 @@ private:
 ABEntry::ABEntry(const string & name, const string & address, const string & phone)
    :theName(name),theAddress(address),thePhone(phone)  //成员初值列表，按照定义的顺序去初始化
 {
-   //这里的操作都是赋值
+   //这里的操作都是赋值，而且杜绝调用虚函数, 因为这个虚函数附属的对象有可能还没初始化
 }
 
 
@@ -40,10 +41,10 @@ class Dir
 public:
    Dir();
 };
-Dir::Dir()
-{
+Dir::Dir() {
    std::size_t disks = tfs().numDisks();
 }
+
 
 //4 各种类型构造函数
 FileSystem e1;        //default construction
@@ -61,4 +62,19 @@ private:
     HomeForSale(const HomeForSale& );     //禁止copy construction
     HomeForSale& operator=(const HomeForSale&)const;  //禁止copy assignment construction
 };
+
+
+//5 copy construction和copy assignment construction
+// 这两部分往往有相同的部分，这些放到init函数去共同调用
+class HomeForSale{
+public:
+    void init(){};
+    HomeForSale(const HomeForSale& ){
+        init();
+    }
+    HomeForSale& operator=(const HomeForSale&)const{
+        init();
+    }
+};
+
 
