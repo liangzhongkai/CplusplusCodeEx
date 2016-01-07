@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stdafx.h>
 
 
 float InvSqrt(float x)
@@ -11,7 +11,7 @@ float InvSqrt(float x)
     return x;
 } 
 
-
+/*
 int main()
 {
     float fvar = 9.01;
@@ -25,3 +25,4 @@ int main()
     return 0;
 
 }
+//*/

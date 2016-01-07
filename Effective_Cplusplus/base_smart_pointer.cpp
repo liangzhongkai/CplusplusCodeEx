@@ -68,3 +68,16 @@ private:
     std::tr1::shared_ptr<Mutex> mutexPtr;     //Lock析构时，如果mutexPtr引用为0，会unlock销毁Mutex，无需特意定义析构函数
 };
 //能动态感知调节内存等资源使用量
+
+
+
+//5 获取资源后放入智能指针的语句，单独写！！！
+//  processWidget( std::tr1::shared_ptr<Widget>(new Widget), priority() ); 
+//  参数有3个执行步骤：1、new Widget；2、priority()；3、shared_ptr<Widget>()
+//  执行顺序不能确定，但如果就按照上面的顺序，如果2出现异常后，将不能将new的Widget指针放入shared_ptr
+//  正确的做法 std::tr1::shared_ptr<Widget> ptr(new Widget);
+//                    processWidget( ptr, priority() );
+
+
+
+

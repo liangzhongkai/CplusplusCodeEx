@@ -21,5 +21,19 @@
     <ClCompile Include="math_inverse_square_root.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="2pc.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="3pc.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mvcc.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

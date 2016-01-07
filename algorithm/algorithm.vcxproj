@@ -11,8 +11,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="2pc.cpp" />
+    <ClCompile Include="3pc.cpp" />
     <ClCompile Include="dp_Packet9Section.cpp" />
     <ClCompile Include="math_inverse_square_root.cpp" />
+    <ClCompile Include="mvcc.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{9746F579-AEFF-4A2C-9094-5DF9EB02E267}</ProjectGuid>
