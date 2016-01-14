@@ -1,5 +1,7 @@
 #include <stdafx.h>
 
+// ²Î¿¼£ºhttp://blog.csdn.net/suwei19870312/article/details/9193173
+
 
 float InvSqrt(float x)
 {

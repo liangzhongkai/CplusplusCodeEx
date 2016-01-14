@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "algorithm", "algorithm\algo
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Frangipani", "Frangipani\Frangipani.vcxproj", "{1D1D7D8B-DB79-4F50-8842-20E33928C446}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "linux", "linux\linux.vcxproj", "{CBE1A17A-10F4-454C-A810-12C0E51CCEBF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -34,6 +36,12 @@ Global
 		{1D1D7D8B-DB79-4F50-8842-20E33928C446}.Release|Win32.ActiveCfg = Release|Win32
 		{1D1D7D8B-DB79-4F50-8842-20E33928C446}.Release|Win32.Build.0 = Release|Win32
 		{1D1D7D8B-DB79-4F50-8842-20E33928C446}.Release|x64.ActiveCfg = Release|Win32
+		{CBE1A17A-10F4-454C-A810-12C0E51CCEBF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CBE1A17A-10F4-454C-A810-12C0E51CCEBF}.Debug|Win32.Build.0 = Debug|Win32
+		{CBE1A17A-10F4-454C-A810-12C0E51CCEBF}.Debug|x64.ActiveCfg = Debug|Win32
+		{CBE1A17A-10F4-454C-A810-12C0E51CCEBF}.Release|Win32.ActiveCfg = Release|Win32
+		{CBE1A17A-10F4-454C-A810-12C0E51CCEBF}.Release|Win32.Build.0 = Release|Win32
+		{CBE1A17A-10F4-454C-A810-12C0E51CCEBF}.Release|x64.ActiveCfg = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
