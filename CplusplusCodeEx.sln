@@ -5,6 +5,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Effective_Cplusplus", "Effe
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "algorithm", "algorithm\algorithm.vcxproj", "{9746F579-AEFF-4A2C-9094-5DF9EB02E267}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Frangipani", "Frangipani\Frangipani.vcxproj", "{1D1D7D8B-DB79-4F50-8842-20E33928C446}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -26,6 +28,12 @@ Global
 		{9746F579-AEFF-4A2C-9094-5DF9EB02E267}.Release|Win32.ActiveCfg = Release|Win32
 		{9746F579-AEFF-4A2C-9094-5DF9EB02E267}.Release|Win32.Build.0 = Release|Win32
 		{9746F579-AEFF-4A2C-9094-5DF9EB02E267}.Release|x64.ActiveCfg = Release|Win32
+		{1D1D7D8B-DB79-4F50-8842-20E33928C446}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1D1D7D8B-DB79-4F50-8842-20E33928C446}.Debug|Win32.Build.0 = Debug|Win32
+		{1D1D7D8B-DB79-4F50-8842-20E33928C446}.Debug|x64.ActiveCfg = Debug|Win32
+		{1D1D7D8B-DB79-4F50-8842-20E33928C446}.Release|Win32.ActiveCfg = Release|Win32
+		{1D1D7D8B-DB79-4F50-8842-20E33928C446}.Release|Win32.Build.0 = Release|Win32
+		{1D1D7D8B-DB79-4F50-8842-20E33928C446}.Release|x64.ActiveCfg = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
