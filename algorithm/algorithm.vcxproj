@@ -13,6 +13,7 @@
   <ItemGroup>
     <ClCompile Include="2pc.cpp" />
     <ClCompile Include="3pc.cpp" />
+    <ClCompile Include="consistent_hash.cpp" />
     <ClCompile Include="dp_Packet9Section.cpp" />
     <ClCompile Include="math_inverse_square_root.cpp" />
     <ClCompile Include="mvcc.cpp" />

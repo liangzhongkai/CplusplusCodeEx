@@ -30,6 +30,9 @@
     <ClCompile Include="mvcc.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="consistent_hash.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
