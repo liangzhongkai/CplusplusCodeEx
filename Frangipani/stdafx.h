@@ -2,5 +2,9 @@
 //   referring to this github repo : https://github.com/ldaochen/yfs2012
 
 
+//    yum install -y  fuse fuse* fuse-devel
 
+
+
+//
 

@@ -68,7 +68,7 @@ private:
 // 这两部分往往有相同的部分，这些放到init函数去共同调用
 class HomeForSale{
 public:
-    void init(){};
+    void init(){}; //用于"大型"成员变量的初始化，操作例如：分配空间等
     HomeForSale(const HomeForSale& ){
         init();
     }
