@@ -1,12 +1,12 @@
-#include <stdafx.h>
+ï»¿#include <stdafx.h>
 
 
-//1 ÄÚÖÃÀàĞÍ     C++²»±£Ö¤ËûÃÇµÄ³õÊ¼»¯
+//1 å†…ç½®ç±»å‹     C++ä¸ä¿è¯ä»–ä»¬çš„åˆå§‹åŒ–
 int x = 0;
 double d = 0.0L;
 
 
-//2 ·ÇÄÚÖÃÀàĞÍ £¬Òª¿¿¹¹Ôìº¯Êı½øĞĞ³õÊ¼»¯£¬¶øÀà³ÉÔ±±äÁ¿Ó¦¸ÃÔÚ²ÎÊıÁĞ±íÀï³õÊ¼»¯
+//2 éå†…ç½®ç±»å‹ ï¼Œè¦é æ„é€ å‡½æ•°è¿›è¡Œåˆå§‹åŒ–ï¼Œè€Œç±»æˆå‘˜å˜é‡åº”è¯¥åœ¨å‚æ•°åˆ—è¡¨é‡Œåˆå§‹åŒ–
 class ABEntry{
 public:
    ABEntry(const string & name, const string & address, const string & phone);
@@ -16,15 +16,15 @@ private:
    string thePhone;
 };
 ABEntry::ABEntry(const string & name, const string & address, const string & phone)
-   :theName(name),theAddress(address),thePhone(phone)  //³ÉÔ±³õÖµÁĞ±í£¬°´ÕÕ¶¨ÒåµÄË³ĞòÈ¥³õÊ¼»¯
+   :theName(name),theAddress(address),thePhone(phone)  //æˆå‘˜åˆå€¼åˆ—è¡¨ï¼ŒæŒ‰ç…§å®šä¹‰çš„é¡ºåºå»åˆå§‹åŒ–
 {
-   //ÕâÀïµÄ²Ù×÷¶¼ÊÇ¸³Öµ£¬¶øÇÒ¶Å¾øµ÷ÓÃĞéº¯Êı, ÒòÎªÕâ¸öĞéº¯Êı¸½ÊôµÄ¶ÔÏóÓĞ¿ÉÄÜ»¹Ã»³õÊ¼»¯
+   //è¿™é‡Œçš„æ“ä½œéƒ½æ˜¯èµ‹å€¼ï¼Œè€Œä¸”æœç»è°ƒç”¨è™šå‡½æ•°, å› ä¸ºè¿™ä¸ªè™šå‡½æ•°é™„å±çš„å¯¹è±¡æœ‰å¯èƒ½è¿˜æ²¡åˆå§‹åŒ–
 }
 
 
-//3 ÁË½â³ÌĞò¿ªÊ¼£¬µ½³ÌĞò½áÊøµÄ¸÷Àà³ÉÔ±µÄ³õÊ¼»¯´ÎĞò
-//  ±ÜÃâÔÚÄ³Ğ©¶ÔÏóÔÚ³õÊ¼»¯Ê±ºòÊ¹ÓÃÁËÎ´³õÊ¼»¯µÄ¶ÔÏó
-//  ³¡ºÏ£ºÌá¹©¶ÔÏó¸ø¿Í»§Ê¹ÓÃ£¬¾ÍÒªÈ·±£×Ô¼ºµÄ¶«Î÷¶¼×¼±¸ºÃÁË
+//3 äº†è§£ç¨‹åºå¼€å§‹ï¼Œåˆ°ç¨‹åºç»“æŸçš„å„ç±»æˆå‘˜çš„åˆå§‹åŒ–æ¬¡åº
+//  é¿å…åœ¨æŸäº›å¯¹è±¡åœ¨åˆå§‹åŒ–æ—¶å€™ä½¿ç”¨äº†æœªåˆå§‹åŒ–çš„å¯¹è±¡
+//  åœºåˆï¼šæä¾›å¯¹è±¡ç»™å®¢æˆ·ä½¿ç”¨ï¼Œå°±è¦ç¡®ä¿è‡ªå·±çš„ä¸œè¥¿éƒ½å‡†å¤‡å¥½äº†
 class FileSystem 
 {
 public:
@@ -32,10 +32,10 @@ public:
 };
 FileSystem & tfs()
 {
-   static FileSystem fs;   //ËäÈ»ÔÚ¶àÏß³Ì»·¾³ÓĞ²»È·¶¨ĞÔ£¬µ«È·±£ÁËÊ¹ÓÃfs¶ÔÏóÖ®Ç°ÒÑ¾­³õÊ¼»¯ÁË
+   static FileSystem fs;   //è™½ç„¶åœ¨å¤šçº¿ç¨‹ç¯å¢ƒæœ‰ä¸ç¡®å®šæ€§ï¼Œä½†ç¡®ä¿äº†ä½¿ç”¨fså¯¹è±¡ä¹‹å‰å·²ç»åˆå§‹åŒ–äº†
    return fs;
 }
-//¿Í»§Ê¹ÓÃ
+//å®¢æˆ·ä½¿ç”¨
 class Dir 
 {
 public:
@@ -46,29 +46,29 @@ Dir::Dir() {
 }
 
 
-//4 ¸÷ÖÖÀàĞÍ¹¹Ôìº¯Êı
+//4 å„ç§ç±»å‹æ„é€ å‡½æ•°
 FileSystem e1;        //default construction
-//ÏÂÃæÁ½ÖÖÎª´«Öµ
+//ä¸‹é¢ä¸¤ç§ä¸ºä¼ å€¼
 FileSystem e2(e1);  //copy construction
 e2 = e1;                 //copy assignment construction   operator =
-//Èç¹ûÏë×èÖ¹ÕâĞ©ĞĞÎª, ÊµÏÖÃ¿Ò»¸ö¶ÔÏó¶¼¶ÀÒ»ÎŞ¶ş, µ«ÊÇÓĞ¿ÉÒÔ±»¼Ì³Ğ
+//å¦‚æœæƒ³é˜»æ­¢è¿™äº›è¡Œä¸º, å®ç°æ¯ä¸€ä¸ªå¯¹è±¡éƒ½ç‹¬ä¸€æ— äºŒ, ä½†æ˜¯æœ‰å¯ä»¥è¢«ç»§æ‰¿
 class HomeForSale{
 public:
     int aaa();
 protected:
-    HomeForSale();                                      //½ûÖ¹default construction
-    ~HomeForSale();                                    //½ûÖ¹default destruction
+    HomeForSale();                                      //ç¦æ­¢default construction
+    ~HomeForSale();                                    //ç¦æ­¢default destruction
 private:
-    HomeForSale(const HomeForSale& );     //½ûÖ¹copy construction
-    HomeForSale& operator=(const HomeForSale&)const;  //½ûÖ¹copy assignment construction
+    HomeForSale(const HomeForSale& );     //ç¦æ­¢copy construction
+    HomeForSale& operator=(const HomeForSale&)const;  //ç¦æ­¢copy assignment construction
 };
 
 
-//5 copy constructionºÍcopy assignment construction
-// ÕâÁ½²¿·ÖÍùÍùÓĞÏàÍ¬µÄ²¿·Ö£¬ÕâĞ©·Åµ½initº¯ÊıÈ¥¹²Í¬µ÷ÓÃ
+//5 copy constructionå’Œcopy assignment construction
+// è¿™ä¸¤éƒ¨åˆ†å¾€å¾€æœ‰ç›¸åŒçš„éƒ¨åˆ†ï¼Œè¿™äº›æ”¾åˆ°initå‡½æ•°å»å…±åŒè°ƒç”¨
 class HomeForSale{
 public:
-    void init(){}; //ÓÃÓÚ"´óĞÍ"³ÉÔ±±äÁ¿µÄ³õÊ¼»¯£¬²Ù×÷ÀıÈç£º·ÖÅä¿Õ¼äµÈ
+    void init(){}; //ç”¨äº"å¤§å‹"æˆå‘˜å˜é‡çš„åˆå§‹åŒ–ï¼Œæ“ä½œä¾‹å¦‚ï¼šåˆ†é…ç©ºé—´ç­‰
     HomeForSale(const HomeForSale& ){
         init();
     }

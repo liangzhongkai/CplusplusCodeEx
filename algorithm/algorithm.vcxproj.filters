@@ -33,6 +33,9 @@
     <ClCompile Include="consistent_hash.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="longest_substring.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">

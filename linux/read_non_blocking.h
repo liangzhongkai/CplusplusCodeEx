@@ -1,4 +1,4 @@
-#include <setjmp.h>
+﻿#include <setjmp.h>
 #include <stdarg.h>
 //#include <unistd.h>
 #include <stdio.h>
@@ -8,7 +8,7 @@
 
 #define READ_NON_BLOCKING_VERSION 1
 
-// �汾1
+// 版本1
 #if ( READ_NON_BLOCKING_VERSION  == 1 )
 extern volatile int invoke_count;
 extern jmp_buf invoke_env;
@@ -43,7 +43,7 @@ end:\
 }
 #endif
 
-// �汾2
+// 版本2
 #if ( READ_NON_BLOCKING_VERSION  == 2 )
 extern volatile int invoke_count;
 extern sigjmp_buf invoke_env;
@@ -53,7 +53,7 @@ typedef void sigfunc(int sig);
 sigfunc *my_signal(int signo, sigfunc* func);
 #define E_CALL_TIMEOUT (-9)
 
-#define add_timeout_to_func(func, n, interval, ret, ��) \
+#define add_timeout_to_func(func, n, interval, ret, …) \
 { \
     invoke_count = 0; \
     sigfunc *sf = my_signal(SIGALRM, timeout_signal_handler); \
@@ -80,7 +80,7 @@ end:\
 #endif
 
 
-// �汾3
+// 版本3
 #if ( READ_NON_BLOCKING_VERSION  == 3 )
 
 #endif

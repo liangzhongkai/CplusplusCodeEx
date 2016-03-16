@@ -1,30 +1,30 @@
-#include <stdafx.h>
+ï»¿#include <stdafx.h>
 
 
-//1 ÊıÖµÀàĞÍ
+//1 æ•°å€¼ç±»å‹
 const double AspectRatio = 1.653;    
 
 
-//2 ×Ö·û´®
+//2 å­—ç¬¦ä¸²
 const char * const authorName = "kct";
-//¸üºÃµÄ×ö·¨£ºconst std::string authorName("kct");
+//æ›´å¥½çš„åšæ³•ï¼šconst std::string authorName("kct");
 
 
-//3 ÀàÀïµÄ³£Á¿(defineÊÇÈ«¾ÖµÄ£¬¿ç×÷ÓÃÓòµÄ)
+//3 ç±»é‡Œçš„å¸¸é‡(defineæ˜¯å…¨å±€çš„ï¼Œè·¨ä½œç”¨åŸŸçš„)
 class Player1{
-private://ÄÚ²¿Ê¹ÓÃ
+private://å†…éƒ¨ä½¿ç”¨
    static const int NumTurns = 5;
 };
 
 
 //4 
-//4.1 ÆÕÍ¨Ö¸Õë
+//4.1 æ™®é€šæŒ‡é’ˆ
 char str[] = "kct";
-char * p1 = str;                  //ËæÒâ
-const char * p2 = str;            //const Êı¾İ
-char * const p3 = str;            //const Ö¸Õë      ÓĞµãÏñÒıÓÃ
-const char * const  p4 = str;     //const Ö¸Õë  Êı¾İ
-//4.2 STLµÄÖ¸Õë -- ¸úÆ½Ê±µÄ¸ÕºÃÏà·´
+char * p1 = str;                  //éšæ„
+const char * p2 = str;            //const æ•°æ®
+char * const p3 = str;            //const æŒ‡é’ˆ      æœ‰ç‚¹åƒå¼•ç”¨
+const char * const  p4 = str;     //const æŒ‡é’ˆ  æ•°æ®
+//4.2 STLçš„æŒ‡é’ˆ -- è·Ÿå¹³æ—¶çš„åˆšå¥½ç›¸å
 vector<int> i1(10,1);
 vector<int>::iterator iter1 = i1.begin();
 const vector<int>::iterator iter2 = i1.begin();
@@ -35,18 +35,18 @@ vector<int>::const_iterator iter3 = i1.begin();
 //*iter3 = 10;  //ERROR
 
 
-//5 ÒıÓÃ
-//ÒıÓÃ±¾Éí¾ÍÓĞÒ»ÖÖchar * constµÄÎ¶µÀ£¬¼´constÖ¸Õë
+//5 å¼•ç”¨
+//å¼•ç”¨æœ¬èº«å°±æœ‰ä¸€ç§char * constçš„å‘³é“ï¼Œå³constæŒ‡é’ˆ
 
 
-//6 º¯Êı£¨·µ»ØÖµ¡¢²ÎÊıºóÃæ£©
+//6 å‡½æ•°ï¼ˆè¿”å›å€¼ã€å‚æ•°åé¢ï¼‰
 class TextBlock1{
 public:
-   //ÕıÈ·£¬È·±£·µ»ØÒıÓÃµÄ°²È«£¬»¹È·±£º¯ÊıÄÚ²¿non-staticµÄ°²È«<ÈôÒªÏû³ı£¬½«±äÁ¿ÉèÖÃÎªmutable>
+   //æ­£ç¡®ï¼Œç¡®ä¿è¿”å›å¼•ç”¨çš„å®‰å…¨ï¼Œè¿˜ç¡®ä¿å‡½æ•°å†…éƒ¨non-staticçš„å®‰å…¨<è‹¥è¦æ¶ˆé™¤ï¼Œå°†å˜é‡è®¾ç½®ä¸ºmutable>
    const char & operator[](std::size_t position) const{     
       return text[position];
    }
-   //²»ÓÃconst µ¼ÖÂµ÷ÓÃµÄµØ·½¿ÉÒÔĞŞ¸ÄÖµ
+   //ä¸ç”¨const å¯¼è‡´è°ƒç”¨çš„åœ°æ–¹å¯ä»¥ä¿®æ”¹å€¼
    //char & operator[](std::size_t position) const{           
    //    return text[position];
    //}
@@ -55,7 +55,7 @@ private:
 };
 
 
-//7 ÀàĞÍ×ª»»
+//7 ç±»å‹è½¬æ¢
 class TextBlock2{
 public:
    const char & operator[](std::size_t position) const{  
@@ -64,8 +64,8 @@ public:
    }
    char & operator[](std::size_t position) {
       return 
-      const_cast<char&>(                                                   //ÓÃÀ´ĞŞ¸ÄÀàĞÍµÄconst»òvolatileÊôĞÔ
-      static_cast<const TextBlock2&>(*this)[position]      //const TextBlock2&   Õâ¸ö¼ÓÁËconstµÄÀàĞÍ²ÅÄÜµ÷ÓÃÉÏÃæconst°æ±¾µÄoperator[]
+      const_cast<char&>(                                                   //ç”¨æ¥ä¿®æ”¹ç±»å‹çš„constæˆ–volatileå±æ€§
+      static_cast<const TextBlock2&>(*this)[position]      //const TextBlock2&   è¿™ä¸ªåŠ äº†constçš„ç±»å‹æ‰èƒ½è°ƒç”¨ä¸Šé¢constç‰ˆæœ¬çš„operator[]
    );
 }
 private:

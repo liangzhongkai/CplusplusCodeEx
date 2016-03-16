@@ -1,7 +1,7 @@
-#include <stdafx.h>
+ï»¿#include <stdafx.h>
 
-//1 ÀàÀïµÄ³£Á¿(defineÊÇÈ«¾ÖµÄ£¬¿ç×÷ÓÃÓòµÄ)
+//1 ç±»é‡Œçš„å¸¸é‡(defineæ˜¯å…¨å±€çš„ï¼Œè·¨ä½œç”¨åŸŸçš„)
 class Player2{
-private://ÄÚ²¿Ê¹ÓÃ
+private://å†…éƒ¨ä½¿ç”¨
     enum{ NumTurns = 5 };
 };

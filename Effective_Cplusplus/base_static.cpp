@@ -1,6 +1,6 @@
-#include <stdafx.h>
+ï»¿#include <stdafx.h>
 
-//1 staticµÄ¶ÔÏóÊÇÍÑÀë¶ÔÏóµÄ£¬ÊÙÃüÊÇ´Ó³ÌÐò¿ªÊ¼µ½³ÌÐò½áÊø
+//1 staticçš„å¯¹è±¡æ˜¯è„±ç¦»å¯¹è±¡çš„ï¼Œå¯¿å‘½æ˜¯ä»Žç¨‹åºå¼€å§‹åˆ°ç¨‹åºç»“æŸ
 class A
 {
 public:
@@ -9,8 +9,8 @@ public:
 A::aaaa = 0;
 
 //2 local static & non-local static
-//  ¹©¶ÔÍâÊ¹ÓÃµÄ¶ÔÏó×îºÃÊ¹ÓÃlocal static
-//  non-local static¼´È«¾Östatic£¬³õÊ¼»¯´ÎÐò²»ÄÜÈ·¶¨
+//  ä¾›å¯¹å¤–ä½¿ç”¨çš„å¯¹è±¡æœ€å¥½ä½¿ç”¨local static
+//  non-local staticå³å…¨å±€staticï¼Œåˆå§‹åŒ–æ¬¡åºä¸èƒ½ç¡®å®š
 
 
 

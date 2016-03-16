@@ -1,18 +1,21 @@
-#include <stdafx.h>
+﻿#include "stdafx.h"
+
+
+#ifdef _TWO_PHASE_COMMIT_
 
 //////////////////////////////////////////////////////////
 //
-//   ���֣����׶��ύЭ��<һ����Э���һ��>
-//   ��;��ʵ��ԭ���Բ����������
-//   ���ģ�ÿ�ֽ�ɫ��״̬�仯������ֻ��һ���ߣ���Ϊ��������н��յ�����ʧЧ�İ���״̬�����Խ��յ��İ����������Ĳ�����״̬��¼����־�ļ�
-//             ����ÿ�ֽ�ɫ��״̬�仯���ܳ������޵ȴ�����ʱ������ܽ�����
-//   ����취����ʱ���ڷ�
+//   名字：二阶段提交协议<一致性协议的一种>
+//   用途：实现原子性操作，事务等
+//   核心：每种角色的状态变化都必须只有一条线，因为事务过程中接收到许多失效的包，状态决定对接收到的包进行怎样的操作，状态记录在日志文件
+//             而且每种角色的状态变化不能出现无限等待，超时后必须能结束掉
+//   解决办法：超时等于否定
 //
 //////////////////////////////////////////////////////////
 
 void Actions_Of_Coordinator(){
     write("START_2PC to local log");
-    multicast("VOTE_REQUEST to all participants");    //����һ����һ�޶�������ID
+    multicast("VOTE_REQUEST to all participants");    //附带一个独一无二的事务ID
 
     while(not all votes have been collected) {
         waitfor("any incoming vote");
@@ -21,13 +24,13 @@ void Actions_Of_Coordinator(){
             multicast("GLOBAL_ABORT to all participants");
             return;
         }
-        record(vote);  // �ռ�ͶƱvotes, ֱ��ȫ������
+        record(vote);  // 收集投票votes, 直到全部集齐
     }
 
-    if(all participants send VOTE_COMMIT and coordinatorvotes COMMIT) {   // ���ȫ����Ͷ�޳�Ʊ
+    if(all participants send VOTE_COMMIT and coordinatorvotes COMMIT) {   // 如果全部都投赞成票
         write("GLOBAL_COMMIT to local log");
         multicast("GLOBAL_COMMIT to all participants");
-    } else {                                                                                                        // ��һ�������ϲ�����Ͷ����Ʊ
+    } else {                                                                                                        // 有一个或以上参与者投反对票
         write("GLOBAL_ABORT to local log");
         multicast("GLOBAL_ABORT to all participants");
     }
@@ -41,14 +44,14 @@ void Actions_Of_Participants(){
         return;
     }
 
-    if("participant votes COMMIT") {     // ����ò����߱�����Դ����ʹ�ã��㷵��COMMIT������ס��Դ��ֱ��Э���߾����Ƿ�����������Դ��Ȼ�����
+    if("participant votes COMMIT") {     // 如果该参与者本地资源可以使用，便返回COMMIT，并锁住资源，直到协调者决定是否真正操作资源，然后解锁
         write("VOTE_COMMIT to local log");
         send("VOTE_COMMIT to coordinator");
         waitfor("DESCISION from coordinator");
 
         if(timeout) {
             multicast("DECISION_REQUEST to other participants");
-            waituntil("DECISION is received"); // ֱ�����������ߵĻظ�������������һû�в������յ�Э���ߵľ������ѵ�Ҫһֱ����ȥ�����ڲ���
+            waituntil("DECISION is received"); // 直到其他参与者的回复到来，但是万一没有参与者收到协调者的决定，难道要一直等下去？绝壁不是
             if(timeout) {
                 write("GLOBAL_ABORT to local log");
                 return;
@@ -66,3 +69,5 @@ void Actions_Of_Participants(){
         send("GLOBAL_ABORT to coordinator");
     }
 }
+
+#endif

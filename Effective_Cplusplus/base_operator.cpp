@@ -1,22 +1,22 @@
-#include <stdafx.h>
+ï»¿#include <stdafx.h>
 
 //1 operator=
-//   ·µ»ØÒ»¸öreference to *this,  ÊÊÓÃÓÚËùÓĞ´øÓĞ=µÄÔËËã·û£º+=|-=|*=µÈ
+//   è¿”å›ä¸€ä¸ªreference to *this,  é€‚ç”¨äºæ‰€æœ‰å¸¦æœ‰=çš„è¿ç®—ç¬¦ï¼š+=|-=|*=ç­‰
 class Widget{
 public:
     Widget & operator=(const Widget& rhs){
-        //¡£¡£¡£¡£
+        //ã€‚ã€‚ã€‚ã€‚
         return * this;
     }
 };
-//×ÔÎÒ¸³Öµ
+//è‡ªæˆ‘èµ‹å€¼
 Widget list[10];
 for(int i=0; i<10; ++i){
     for(int j=0; j<10; ++j){
-        list[i] = list[j];        //Ç±ÔÚµÄ×ÔÎÒ¸³Öµ£¬i ¿ÉÄÜµÈÓÚ j
+        list[i] = list[j];        //æ½œåœ¨çš„è‡ªæˆ‘èµ‹å€¼ï¼Œi å¯èƒ½ç­‰äº j
     }
 }
-//ËùÒÔÒª¼æ±¸°²È«ĞÔ
+//æ‰€ä»¥è¦å…¼å¤‡å®‰å…¨æ€§
 // <1>
 //Widget & Widget::operator=(const Widget& rhs){
 //    if( this != &rhs ){
@@ -35,6 +35,6 @@ for(int i=0; i<10; ++i){
 
 
 //2 operator[]
-//   ·µ»ØÒ»¸öconst reference 
+//   è¿”å›ä¸€ä¸ªconst reference 
 
 

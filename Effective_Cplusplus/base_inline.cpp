@@ -1,6 +1,6 @@
-#include <stdafx.h>
+ï»¿#include <stdafx.h>
 
-//1 È¡´údefineµÄĞ¡º¯Êı
+//1 å–ä»£defineçš„å°å‡½æ•°
 template<typename T>
 inline void callWithMax( const T& a, const T& b ){
     f( a > b ? a : b );

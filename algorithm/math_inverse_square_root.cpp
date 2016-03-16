@@ -1,6 +1,10 @@
-#include <stdafx.h>
+ï»¿#include "stdafx.h"
 
-// ²Î¿¼£ºhttp://blog.csdn.net/suwei19870312/article/details/9193173
+
+#ifdef _MATH_INVERSE_SQUARE_ROOT_
+
+
+// å‚è€ƒï¼šhttp://blog.csdn.net/suwei19870312/article/details/9193173
 
 
 float InvSqrt(float x)
@@ -28,3 +32,5 @@ int main()
 
 }
 //*/
+
+#endif

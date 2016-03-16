@@ -1,5 +1,5 @@
-#include <stdafx.h>
+Ôªø#include <stdafx.h>
 
-//1 ÷÷¿‡
+//1 ÁßçÁ±ª
 //   
 //   

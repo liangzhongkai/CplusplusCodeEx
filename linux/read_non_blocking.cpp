@@ -1,21 +1,21 @@
-#include <stdafx.h>
+ï»¿#include <stdafx.h>
 
 
 ////////////////////////////////////////////////////////
 //
-//    ÎÊÌâ£ºµ÷ÓÃ×èÈû¶à·¢ÉúÔÚI/O²Ù×÷£¨´ÅÅÌ¡¢ÍøÂç¡¢µÍËÙÉè±¸£©¡¢µÚÈý·½APIµ÷ÓÃµÈ·½Ãæ¡£
-//              ¶ÔÓÚÎÄ¼þ/ÍøÂçI/O²Ù×÷£¬ÎÒÃÇ¿ÉÀûÓÃÔÚ·Ç×èÈûÎÄ¼þÃèÊö·ûÉÏselect /pollµÄ³¬Ê±»úÖÆÀ´Ìæ´úÕë¶Ô×èÈûÐÍÎÄ¼þÃèÊö·ûµÄÏµÍ³µ÷ÓÃ£»
-//              µ«ÔÚµÚÈý·½API·½Ãæ£¬¶àÊýÊ±ºòÊÇÎÞ·¨ÓÃselect/pollÀ´½øÐÐ³¬Ê±µÄ
+//    é—®é¢˜ï¼šè°ƒç”¨é˜»å¡žå¤šå‘ç”Ÿåœ¨I/Oæ“ä½œï¼ˆç£ç›˜ã€ç½‘ç»œã€ä½Žé€Ÿè®¾å¤‡ï¼‰ã€ç¬¬ä¸‰æ–¹APIè°ƒç”¨ç­‰æ–¹é¢ã€‚
+//              å¯¹äºŽæ–‡ä»¶/ç½‘ç»œI/Oæ“ä½œï¼Œæˆ‘ä»¬å¯åˆ©ç”¨åœ¨éžé˜»å¡žæ–‡ä»¶æè¿°ç¬¦ä¸Šselect /pollçš„è¶…æ—¶æœºåˆ¶æ¥æ›¿ä»£é’ˆå¯¹é˜»å¡žåž‹æ–‡ä»¶æè¿°ç¬¦çš„ç³»ç»Ÿè°ƒç”¨ï¼›
+//              ä½†åœ¨ç¬¬ä¸‰æ–¹APIæ–¹é¢ï¼Œå¤šæ•°æ—¶å€™æ˜¯æ— æ³•ç”¨select/pollæ¥è¿›è¡Œè¶…æ—¶çš„
 //
-//    ·½·¨1£ºÀûÓÃselect/pollÉèÖÃ³¬Ê±Ê±¼ä
-//    ·½·¨2£ºÀûÓÃ¶¨Ê±Æ÷(alarm<Ãë¼¶>¡¢setitimer<ºÁÃë¼¶>)ÉèÖÃ³¬Ê±Ê±¼ä£¬SIGALRM´¦Àíº¯ÊýÖÐlongjmpÌøµ½×èÈûÐÍµ÷ÓÃÖ®Ç°£¬´ïµ½³¬Ê±Ìø³ö×èÈûÐÍº¯Êýµ÷ÓÃµÄÐ§¹û
-//    ·½·¨3£ºÀàËÆ·½·¨2£¬ÊÇ²úÉúÆäËûÐÅºÅ£¬²¢ÉèÖÃÆäÏàÓ¦µÄÐÅºÅ´¦Àíº¯Êý
+//    æ–¹æ³•1ï¼šåˆ©ç”¨select/pollè®¾ç½®è¶…æ—¶æ—¶é—´
+//    æ–¹æ³•2ï¼šåˆ©ç”¨å®šæ—¶å™¨(alarm<ç§’çº§>ã€setitimer<æ¯«ç§’çº§>)è®¾ç½®è¶…æ—¶æ—¶é—´ï¼ŒSIGALRMå¤„ç†å‡½æ•°ä¸­longjmpè·³åˆ°é˜»å¡žåž‹è°ƒç”¨ä¹‹å‰ï¼Œè¾¾åˆ°è¶…æ—¶è·³å‡ºé˜»å¡žåž‹å‡½æ•°è°ƒç”¨çš„æ•ˆæžœ
+//    æ–¹æ³•3ï¼šç±»ä¼¼æ–¹æ³•2ï¼Œæ˜¯äº§ç”Ÿå…¶ä»–ä¿¡å·ï¼Œå¹¶è®¾ç½®å…¶ç›¸åº”çš„ä¿¡å·å¤„ç†å‡½æ•°
 //
-//    ²Î¿¼£ºhttp://tonybai.com/2013/10/25/add-timeout-to-blocking-function-call/
+//    å‚è€ƒï¼šhttp://tonybai.com/2013/10/25/add-timeout-to-blocking-function-call/
 //
 ////////////////////////////////////////////////////////
 
-//                      °æ±¾1
+//                      ç‰ˆæœ¬1
 #if ( READ_NON_BLOCKING_VERSION  == 1 )
 volatile int invoke_count = 0;
 jmp_buf invoke_env;
@@ -28,7 +28,7 @@ void
 }
 #endif
 
-//                      °æ±¾2
+//                      ç‰ˆæœ¬2
 #if ( READ_NON_BLOCKING_VERSION  == 2 )
 volatile int invoke_count = 0;
 sigjmp_buf invoke_env;
@@ -65,9 +65,9 @@ sigfunc *
 
 
 
-//                       °æ±¾3
+//                       ç‰ˆæœ¬3
 #if ( READ_NON_BLOCKING_VERSION  == 3 )
-#define add_timeout_to_func(func, n, interval, ret, ¡­) \
+#define add_timeout_to_func(func, n, interval, ret, â€¦) \
     { \
     invoke_count = 0; \
     sigfunc *sf = my_signal(SIGALRM, timeout_signal_handler); \

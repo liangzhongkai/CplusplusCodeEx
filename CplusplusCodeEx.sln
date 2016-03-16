@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Effective_Cplusplus", "Effective_Cplusplus\Effective_Cplusplus.vcxproj", "{A4B20570-D856-4A22-85B3-618A0F7A3226}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "algorithm", "algorithm\algorithm.vcxproj", "{9746F579-AEFF-4A2C-9094-5DF9EB02E267}"
@@ -8,6 +10,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Frangipani", "Frangipani\Frangipani.vcxproj", "{1D1D7D8B-DB79-4F50-8842-20E33928C446}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "linux", "linux\linux.vcxproj", "{CBE1A17A-10F4-454C-A810-12C0E51CCEBF}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lua", "lua\lua.vcxproj", "{CCDC7B75-46CB-4105-B90A-054D4E0CC206}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,6 +46,14 @@ Global
 		{CBE1A17A-10F4-454C-A810-12C0E51CCEBF}.Release|Win32.ActiveCfg = Release|Win32
 		{CBE1A17A-10F4-454C-A810-12C0E51CCEBF}.Release|Win32.Build.0 = Release|Win32
 		{CBE1A17A-10F4-454C-A810-12C0E51CCEBF}.Release|x64.ActiveCfg = Release|Win32
+		{CCDC7B75-46CB-4105-B90A-054D4E0CC206}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CCDC7B75-46CB-4105-B90A-054D4E0CC206}.Debug|Win32.Build.0 = Debug|Win32
+		{CCDC7B75-46CB-4105-B90A-054D4E0CC206}.Debug|x64.ActiveCfg = Debug|x64
+		{CCDC7B75-46CB-4105-B90A-054D4E0CC206}.Debug|x64.Build.0 = Debug|x64
+		{CCDC7B75-46CB-4105-B90A-054D4E0CC206}.Release|Win32.ActiveCfg = Release|Win32
+		{CCDC7B75-46CB-4105-B90A-054D4E0CC206}.Release|Win32.Build.0 = Release|Win32
+		{CCDC7B75-46CB-4105-B90A-054D4E0CC206}.Release|x64.ActiveCfg = Release|x64
+		{CCDC7B75-46CB-4105-B90A-054D4E0CC206}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,7 +1,7 @@
-#include "Singleton.h"
+ï»¿#include "Singleton.h"
 #include <windows.h>
 
 
-//Íâ²¿³õÊ¼»¯ before invoke main
+//å¤–éƒ¨åˆå§‹åŒ– before invoke main
 const SingletonStatic* SingletonStatic::m_instance = new SingletonStatic;
 

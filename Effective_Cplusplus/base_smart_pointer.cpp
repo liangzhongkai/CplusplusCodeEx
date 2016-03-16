@@ -1,9 +1,9 @@
-#include <stdafx.h>
+ï»¿#include <stdafx.h>
 
 /////////////////////////////////////
-//            ÓÃÓÚ×ÊÔ´¹ÜÀí
-//   1 ¶ÔÓÚÁÙÊ±¡¢ÁãÉ¢µÄ×ÊÔ´£¬¿ÉÒÔÁ¢¼´Ê¹ÓÃÖÇÄÜÖ¸Õë
-//   2 ×¨ÃÅÉè¼Æ×ÊÔ´¹ÜÀíÖĞĞÄ
+//            ç”¨äºèµ„æºç®¡ç†
+//   1 å¯¹äºä¸´æ—¶ã€é›¶æ•£çš„èµ„æºï¼Œå¯ä»¥ç«‹å³ä½¿ç”¨æ™ºèƒ½æŒ‡é’ˆ
+//   2 ä¸“é—¨è®¾è®¡èµ„æºç®¡ç†ä¸­å¿ƒ
 /////////////////////////////////////
 
 
@@ -13,29 +13,29 @@ private:
     int a;
 };
 Item* createItem(){
-    return new Item();      //Resource Acquisition Is Initialization ; RAII    ×ÊÔ´È¡µÃÊ±»ú±ãÊÇ³õÊ¼»¯Ê±»ú
+    return new Item();      //Resource Acquisition Is Initialization ; RAII    èµ„æºå–å¾—æ—¶æœºä¾¿æ˜¯åˆå§‹åŒ–æ—¶æœº
 }
 void f1(){
-    std::auto_ptr<Item> pItem(createItem());    //»ñµÃ×ÊÔ´µÄÍ¬Ê±Ó¦Á¢¼´·Å½ø¹ÜÀí¶ÔÏóÖĞ ¡¾¹ÜÀí¶ÔÏó->×ÊÔ´¡¿£¬¹ÜÀí¶ÔÏó¶Ô×ÊÔ´µÄÉúËÀ¸ºÔğ
-    //auto_ptrµÄÎö¹¹º¯Êı»á×Ô¶¯É¾³ıpItem
+    std::auto_ptr<Item> pItem(createItem());    //è·å¾—èµ„æºçš„åŒæ—¶åº”ç«‹å³æ”¾è¿›ç®¡ç†å¯¹è±¡ä¸­ ã€ç®¡ç†å¯¹è±¡->èµ„æºã€‘ï¼Œç®¡ç†å¯¹è±¡å¯¹èµ„æºçš„ç”Ÿæ­»è´Ÿè´£
+    //auto_ptrçš„ææ„å‡½æ•°ä¼šè‡ªåŠ¨åˆ é™¤pItem
 }
 void f2(){
-    //std::auto_ptrµÄÎ¨Ò»ĞÔ
+    //std::auto_ptrçš„å”¯ä¸€æ€§
     std::auto_ptr<Item> pItem1(createItem());
-    std::auto_ptr<Item> pItem2(pItem1);     //pItem2»ñÈ¡×ÊÔ´£¬pItem1ÉèÎªNULL
-    pItem1 = pItem2;                                   //pItem1»ñÈ¡×ÊÔ´£¬pItem2ÉèÎªNULL
+    std::auto_ptr<Item> pItem2(pItem1);     //pItem2è·å–èµ„æºï¼ŒpItem1è®¾ä¸ºNULL
+    pItem1 = pItem2;                                   //pItem1è·å–èµ„æºï¼ŒpItem2è®¾ä¸ºNULL
 }
 
 //2 std::shared_ptr
-//   ÒıÓÃÎª0£¬¾ÍÏú»Ù
+//   å¼•ç”¨ä¸º0ï¼Œå°±é”€æ¯
 void f3(){
-    //std::auto_ptrµÄÎ¨Ò»ĞÔ
+    //std::auto_ptrçš„å”¯ä¸€æ€§
     std::tr1::shared_ptr<Item> pItem1(createItem());
-    std::tr1::shared_ptr<Item> pItem2(pItem1);     //pItem2£¬pItem1¹²Ö¸ÏòÍ¬Ò»¸ö¶ÔÏó£¬×ÊÔ´ÒıÓÃÊı¼Ó1
-    pItem1 = pItem2;                                   //ÎŞÈÎºÎ¸Ä±ä
-    // pItem2£¬pItem1Ïú»Ùºó£¬×ÊÔ´ÒıÓÃÊıÎª0£¬Á¢¼´Ïú»Ù
+    std::tr1::shared_ptr<Item> pItem2(pItem1);     //pItem2ï¼ŒpItem1å…±æŒ‡å‘åŒä¸€ä¸ªå¯¹è±¡ï¼Œèµ„æºå¼•ç”¨æ•°åŠ 1
+    pItem1 = pItem2;                                   //æ— ä»»ä½•æ”¹å˜
+    // pItem2ï¼ŒpItem1é”€æ¯åï¼Œèµ„æºå¼•ç”¨æ•°ä¸º0ï¼Œç«‹å³é”€æ¯
 }
-//   ¿ØÖÆÉ¾³ıĞĞÎªºÍÊ±¿Ì
+//   æ§åˆ¶åˆ é™¤è¡Œä¸ºå’Œæ—¶åˆ»
 template<class T>
 inline void deleteItem(T * x){
     delete x;
@@ -43,12 +43,12 @@ inline void deleteItem(T * x){
 std::tr1::shared_ptr<Item> pItem(static_cast<Item*>(0), deleteItem<Item>);
 
 
-//3 ÖÇÄÜÖ¸ÕëÏú»Ù¶ÔÏó,  ÊÇdelete,  ¶ø·Çdelete[]
-std::tr1::shared_ptr<Item> pItem1(new Item[4]);    //½á¹ûÖ»»áÏú»Ù[0]¶ÔÓ¦µÄÔªËØ
-//boost::scoped_array    ºÍ   boost::shared_array   ²ÅÊÇstd::auto_ptrºÍstd::tr1::shared_ptrµÄÊı×é°æ±¾
+//3 æ™ºèƒ½æŒ‡é’ˆé”€æ¯å¯¹è±¡,  æ˜¯delete,  è€Œédelete[]
+std::tr1::shared_ptr<Item> pItem1(new Item[4]);    //ç»“æœåªä¼šé”€æ¯[0]å¯¹åº”çš„å…ƒç´ 
+//boost::scoped_array    å’Œ   boost::shared_array   æ‰æ˜¯std::auto_ptrå’Œstd::tr1::shared_ptrçš„æ•°ç»„ç‰ˆæœ¬
 
-//4 ×ÊÔ´¹ÜÀíÖĞĞÄ
-//ÔÊĞí¸´ÖÆ
+//4 èµ„æºç®¡ç†ä¸­å¿ƒ
+//å…è®¸å¤åˆ¶
 class Mutex;
 class Lock1{
 public:
@@ -56,7 +56,7 @@ public:
         lock(mutexPtr.get() );
     }
 private:
-    std::tr1::shared_ptr<Mutex> mutexPtr;     //LockÎö¹¹Ê±£¬Èç¹ûmutexPtrÒıÓÃÎª0£¬»áunlockÏú»ÙMutex£¬ÎŞĞèÌØÒâ¶¨ÒåÎö¹¹º¯Êı
+    std::tr1::shared_ptr<Mutex> mutexPtr;     //Lockææ„æ—¶ï¼Œå¦‚æœmutexPtrå¼•ç”¨ä¸º0ï¼Œä¼šunlocké”€æ¯Mutexï¼Œæ— éœ€ç‰¹æ„å®šä¹‰ææ„å‡½æ•°
 };
 //uncopy
 class Lock2{
@@ -65,17 +65,17 @@ private:     //copy construction define in private
         lock(mutexPtr.get() );
     }
 private:
-    std::tr1::shared_ptr<Mutex> mutexPtr;     //LockÎö¹¹Ê±£¬Èç¹ûmutexPtrÒıÓÃÎª0£¬»áunlockÏú»ÙMutex£¬ÎŞĞèÌØÒâ¶¨ÒåÎö¹¹º¯Êı
+    std::tr1::shared_ptr<Mutex> mutexPtr;     //Lockææ„æ—¶ï¼Œå¦‚æœmutexPtrå¼•ç”¨ä¸º0ï¼Œä¼šunlocké”€æ¯Mutexï¼Œæ— éœ€ç‰¹æ„å®šä¹‰ææ„å‡½æ•°
 };
-//ÄÜ¶¯Ì¬¸ĞÖªµ÷½ÚÄÚ´æµÈ×ÊÔ´Ê¹ÓÃÁ¿
+//èƒ½åŠ¨æ€æ„ŸçŸ¥è°ƒèŠ‚å†…å­˜ç­‰èµ„æºä½¿ç”¨é‡
 
 
 
-//5 »ñÈ¡×ÊÔ´ºó·ÅÈëÖÇÄÜÖ¸ÕëµÄÓï¾ä£¬µ¥¶ÀĞ´£¡£¡£¡
+//5 è·å–èµ„æºåæ”¾å…¥æ™ºèƒ½æŒ‡é’ˆçš„è¯­å¥ï¼Œå•ç‹¬å†™ï¼ï¼ï¼
 //  processWidget( std::tr1::shared_ptr<Widget>(new Widget), priority() ); 
-//  ²ÎÊıÓĞ3¸öÖ´ĞĞ²½Öè£º1¡¢new Widget£»2¡¢priority()£»3¡¢shared_ptr<Widget>()
-//  Ö´ĞĞË³Ğò²»ÄÜÈ·¶¨£¬µ«Èç¹û¾Í°´ÕÕÉÏÃæµÄË³Ğò£¬Èç¹û2³öÏÖÒì³£ºó£¬½«²»ÄÜ½«newµÄWidgetÖ¸Õë·ÅÈëshared_ptr
-//  ÕıÈ·µÄ×ö·¨ std::tr1::shared_ptr<Widget> ptr(new Widget);
+//  å‚æ•°æœ‰3ä¸ªæ‰§è¡Œæ­¥éª¤ï¼š1ã€new Widgetï¼›2ã€priority()ï¼›3ã€shared_ptr<Widget>()
+//  æ‰§è¡Œé¡ºåºä¸èƒ½ç¡®å®šï¼Œä½†å¦‚æœå°±æŒ‰ç…§ä¸Šé¢çš„é¡ºåºï¼Œå¦‚æœ2å‡ºç°å¼‚å¸¸åï¼Œå°†ä¸èƒ½å°†newçš„WidgetæŒ‡é’ˆæ”¾å…¥shared_ptr
+//  æ­£ç¡®çš„åšæ³• std::tr1::shared_ptr<Widget> ptr(new Widget);
 //                    processWidget( ptr, priority() );
 
 

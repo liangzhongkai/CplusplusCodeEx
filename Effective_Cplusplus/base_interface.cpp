@@ -1,17 +1,17 @@
-#include <stdafx.h>
+ï»¿#include <stdafx.h>
 
 
-//1 ²ÎÊıÀàĞÍ¿ØÖÆ
+//1 å‚æ•°ç±»å‹æ§åˆ¶
 struct Day{
-    explicit Day(int d):val(d){};     //½ûÖ¹ÒşÊ½ÀàĞÍ×ª»»
+    explicit Day(int d):val(d){};     //ç¦æ­¢éšå¼ç±»å‹è½¬æ¢
     int val;
 };
 struct Month{
-    explicit Month(int d):val(d){};     //½ûÖ¹ÒşÊ½ÀàĞÍ×ª»»
+    explicit Month(int d):val(d){};     //ç¦æ­¢éšå¼ç±»å‹è½¬æ¢
     int val;
 };
 struct Year{
-    explicit Year(int d):val(d){};     //½ûÖ¹ÒşÊ½ÀàĞÍ×ª»»
+    explicit Year(int d):val(d){};     //ç¦æ­¢éšå¼ç±»å‹è½¬æ¢
     int val;
 };
 class Date{
@@ -19,27 +19,27 @@ public:
     Date(const Month& m, const Day& d, const Year& y);
 };
 Date d(Month(2), Day(30), Year(1999));
-//Date d(2, 30, 1999);//±¨´í
+//Date d(2, 30, 1999);//æŠ¥é”™
 
 
-//2 ·µ»ØÖµÀàĞÍ¿ØÖÆ
+//2 è¿”å›å€¼ç±»å‹æ§åˆ¶
 class Item{
 private:
     int a;
 };
-std::tr1::shared_ptr<Item> createItem(){    //Ç¿ÆÈÓÃ»§Ê¹ÓÃÄ³ÖÖÀàĞÍ
+std::tr1::shared_ptr<Item> createItem(){    //å¼ºè¿«ç”¨æˆ·ä½¿ç”¨æŸç§ç±»å‹
     return std::tr1::shared_ptr<Item>(new Item);
 }
 
-//3 º¯ÊıÃû×Ö
-//   Í³Ò»ÒÔ  "¶¯´Ê_Ãû´Ê"  ÕâÖÖĞÎÊ½
+//3 å‡½æ•°åå­—
+//   ç»Ÿä¸€ä»¥  "åŠ¨è¯_åè¯"  è¿™ç§å½¢å¼
 
 
-//4 ²ÎÊıµÄÖµ¡¢ÒıÓÃ¡¢µØÖ·£¿
-//   Ğ¡ĞÍtype(ÀıÈçÄÚÖÃÀàĞÍ)£¬¶¼Ó¦¸ÃÓÃpass-by-value
-//   ÆäËû¾¡Á¿ÓÃpass-by-reference-to-const
+//4 å‚æ•°çš„å€¼ã€å¼•ç”¨ã€åœ°å€ï¼Ÿ
+//   å°å‹type(ä¾‹å¦‚å†…ç½®ç±»å‹)ï¼Œéƒ½åº”è¯¥ç”¨pass-by-value
+//   å…¶ä»–å°½é‡ç”¨pass-by-reference-to-const
 
 
-//5 ·µ»ØÖµ
-//    ÓĞĞ©·µ»ØÖµ²»ÄÜÓÃÒıÓÃµÄ£¬ÀıÈç£º
+//5 è¿”å›å€¼
+//    æœ‰äº›è¿”å›å€¼ä¸èƒ½ç”¨å¼•ç”¨çš„ï¼Œä¾‹å¦‚ï¼š
 //         const Rational operator* ( const Rational & lhs, const Rational & rhs );
