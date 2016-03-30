@@ -90,7 +90,16 @@
     <ClCompile Include="class_virtual_func.cpp" />
     <ClCompile Include="class_construction.cpp" />
     <ClCompile Include="class_destruction.cpp" />
+    <ClCompile Include="design_bytecode.cpp" />
+    <ClCompile Include="design_command.cpp" />
+    <ClCompile Include="design_doublebuffer.cpp" />
+    <ClCompile Include="design_flyweight.cpp" />
+    <ClCompile Include="design_observer.cpp" />
+    <ClCompile Include="design_optimization.cpp" />
+    <ClCompile Include="design_prototype.cpp" />
     <ClCompile Include="design_Singleton.cpp" />
+    <ClCompile Include="design_state.cpp" />
+    <ClCompile Include="design_decoupling.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="design_Singleton.h" />
